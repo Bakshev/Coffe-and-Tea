@@ -1,0 +1,307 @@
+@font-face {
+  font-family: "Coffe_letra";
+  src: url("Coffe_letra.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 300px;
+}
+::-webkit-scrollbar-track {
+  /*El fondo del */
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  /*la barra */
+  border-radius: 10px;
+  background-color: #a0937d;
+  -webkit-box-shadow: inset 0 0 6px rgba(227, 205, 193, 0.5);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #f6e6cb;
+}
+.Title_Logo{
+    text-decoration: none;
+    cursor: pointer;
+    font-family: "Mystery Quest";
+    color: black;
+    /* display: flexbox; */
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 15px;
+}
+.logo {
+  /*tamaño de la imagen*/
+  position: relative;
+  width: 70px;
+  height: 50px;
+  margin: 0px 0px;
+  left: 10px;
+  top: 21px;
+}
+.imagen {
+  width: 100%;
+  margin: auto;
+  bottom: 30px;
+  /* clip-path: circle(56.2% at 51% 49%); */
+  clip-path: circle(52.8% at 51% 49%);
+  /* clip-path: circle(78.7% at 50% 12%); */
+}
+.menu__link {
+    /*links <a>*/
+    cursor: pointer;
+    display: block;
+    padding: 15px;
+    background-color: #a0937d;
+    color: #fff;
+    height: 60px;
+    /* border-bottom: 1px solid skyblue ; */ /*Bordes*/
+    font-size: 20px;
+    text-decoration: none;
+    font-family: "Mystery Quest";
+  }
+.parrafo {
+  width: 90%;
+  margin: auto;
+}
+.contenedor {
+  /*Todos los div*/
+  width: 100%;
+  margin: auto;
+  top: 50px;
+  height: auto;/**/
+}
+.header {
+  /*Cabecera */
+  background-color: #a0937d;
+  border-bottom: 1px solid rgba(75, 57, 57, 0.795);
+  /* border-left: 1px solid rgba(0, 0, 0, 0.795); */
+  width: 98%; /*esto deberia ser 100*/
+  position: -webkit-sticky;
+  position: sticky;
+  top: 4px;
+  left: 12px;
+  -webkit-box-shadow: 0px 7px 17px 3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 7px 17px 3px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 7px 17px 3px rgba(0, 0, 0, 0.75);
+  z-index: 10000;
+}
+.header .contenedor {
+  /*div del header*/
+  display: flex;
+  justify-content: space-between;
+  /* justify-content: space-evenly; */
+}
+.logo,
+.icon-menu {
+  /*logo y botoncito del menu*/
+  margin: 5px;
+  color: #fff;
+}
+.icon-menu {
+  /*Botoncito*/
+  display: block;
+  width: 40px;
+  font-size: 30px;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.nav {
+  position: absolute;
+  top: 60px;
+  left: -105%;
+  transition: all 0.5s;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(75, 57, 57, 0.9);
+}
+.menu {
+  /*ul*/
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.menu__link:hover {
+  /*efecto hover de los links*/
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+.muestrate {
+  /*Clase que se activa al clickear*/
+  left: 0;
+}
+/**/
+section {
+  text-align: center;
+  line-height: 25px;
+  margin: 0px 20px 0px 20px;
+  border-bottom: 50px solid #f6e6cb;
+  /* height: 100vh; */
+  height: auto;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #e3cdc1;
+  word-break: break-all;
+  /* top: 100px; */
+}
+.parrafo__columna h1 {
+  font-size: 40px;
+  justify-content: space-between;
+  padding: 20px;
+  word-break: break-all;
+  font-family: "Mystery Quest";
+}
+
+.parrafo__columna p {
+  text-align: justify;
+  hyphens: auto;
+  font-family: "Mystery Quest";
+}
+
+/*Cambio de tamaño de pantalla*/
+@media (min-width: 1024px) {
+  .contenedor {
+    width: 1000px;
+  }
+  .nav {
+    position: static;
+    width: auto;
+  }
+  .menu {
+    display: flex;
+  }
+  .icon-menu {
+    display: none;
+  }
+  .menu__link {
+    border: none;
+  }
+  section{
+      height: 100vh;
+  }
+  .contact{
+    width: 500px;
+  }
+  .mision {
+    display: inline;
+    width: 50%;
+    float: left;
+    padding: 20px;
+  }
+  .mision h1{
+    hyphens: auto;
+  }
+  .trabajamos{
+    clip-path: ellipse(48% 30% at 51% 52%);
+  }
+  .overlay{
+    font-size: 50px;
+  }
+}
+.mision img{
+  width: 50%;
+}
+
+@media (min-width: 1200px) {
+  .contenedor {
+    width: 1200px;
+  }
+}
+
+
+.contact{
+  width: 70%;
+  margin: auto;
+  padding: 10px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  background-color: #5c4c3d;
+  color: white;
+  justify-content: space-between;
+  font-family: fantasy;
+  border: solid 1px rgba(65, 64, 64, 0.6);
+  -webkit-box-shadow: 0px 10px 36px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 10px 36px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 10px 36px 0px rgba(0,0,0,0.75);
+}
+
+.trabajamos{
+    width: 50%;
+    clip-path: circle(50% at 50% 50%);
+}
+
+.contenedor-imagenes{
+  /* display: inline; */
+  display: flex;
+  width: 100%;
+  margin:auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border-radius: 3px;
+}
+.contenedor-imagenes .g1{
+  width: 28%;
+  position: relative;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0px 1px 64px -17px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 1px 64px -17px rgba(0,0,0,0.75);
+box-shadow: 0px 1px 64px -17px rgba(0,0,0,0.75);
+}
+.g1 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.overlay{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(153, 137, 137, 0.986);
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: 1s ease;
+  z-index: 10000;
+}
+
+.overlay h2{
+  color: #fff;
+  font-weight: 300;
+  font-size: 20px;
+  font-family: "Mystery Quest";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%,-50%);
+}
+.g1:hover .overlay{
+  height: 100%;
+  cursor: pointer;
+}
+footer{
+  background-color: #5c4c3d;
+  color: #ffffff;
+  font-size: 25px;
+  font-family: "Mystery Quest";
+  -webkit-box-shadow: 0px -4px 17px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px -4px 17px 0px rgba(0,0,0,0.75);
+box-shadow: 0px -4px 17px 0px rgba(0,0,0,0.75);
+
+}
